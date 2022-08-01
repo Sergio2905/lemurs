@@ -5,8 +5,11 @@
     <title>Lemurs</title>
     <meta charset="UTF-8">
     <meta name="format-detection" content="telephone=no">
-    <link rel="stylesheet" href="css/style.min.css?_v=20220627221224">
+    <link rel="stylesheet" href="css/style.min.css?_v=20220703100607">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js?_v=20220703100607"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <body>
@@ -23,20 +26,26 @@
             <span class="btn-close__line line"></span>
         </button>
     </div>
-    <a href="#" class="header__logo">
+    <a href="./" class="header__logo">
         <picture><source srcset="img/logo-green.webp" type="image/webp"><img src="img/logo-green.png" alt="Logo"></picture>
     </a>
     <nav class="header__menu menu" data-last="header-btn, append">
         <ul class="menu__list">
-            <li class="menu__item"><a data-target="." href="#" class="menu__link">Услуги и цены</a></li>
-            <li class="menu__item"><a data-target="." href="#" class="menu__link">Портфолио</a></li>
-            <li class="menu__item"><a data-target="." href="#" class="menu__link">О нас</a></li>
-            <li class="menu__item"><a data-target="." href="#" class="menu__link">Контакты</a></li>
+            <li class="menu__item"><a href="#" class="menu__link">Услуги и цены</a></li>
+            <li class="menu__item"><a href="portfolio.html" class="menu__link">Портфолио</a></li>
+            <li class="menu__item"><a href="#" class="menu__link">О нас</a></li>
+            <li class="menu__item"><a href="contacts.html" class="menu__link">Контакты</a></li>
         </ul>
     </nav>
     <div class="header__functions functions">
-        <a data-first="header-btn, after" href="tel:+380689167037" class="functions__phone">+38 (068) 916 70 37</a>
-        <button data-move="header-btn, 768" type="button" class="functions__btn btn_green">Обговорити проект</button>
+        <a data-first="header-btn, after" href="tel:+380689167037" class="functions__phone">
+            <span>+38 (068) 916 70 37</span>
+            <svg>
+                <use xlink: href="img/icons/icons.svg#phone"></use>
+            </svg>
+        </a>
+        <a href="#callback" data-move="header-btn, 768" class="functions__btn btn_green popup-link">Обговорити
+            проект</a>
         <div class="functions__lang select-box">
             <div class="options-container">
                 <div class="option">
@@ -71,6 +80,17 @@
 					</div>
 				</div>
 				<div class="section-main__container container">
+					<div class="section-main__graph">
+						<div class="section-main__anim-logo">
+							<picture><source srcset="img/logo.webp" type="image/webp"><img src="img/logo.png" alt="Logo"></picture>
+							<svg class="rotating-text">
+								<use xlink: href="img/icons/icons.svg#logo-text"></use>
+							</svg>
+						</div>
+						<div class="section-main__flag">
+							<picture><source srcset="img/Flag.webp" type="image/webp"><img src="img/Flag.png" alt="Flag"></picture>
+						</div>
+					</div>
 					<div class="section-main__content _animated">
 						<h1 class="section-main__title _type-text">Розробка сайтів будь-якої складності</h1>
 						<div class="section-main__text">Задача организации, в особенности же реализация намеченных
@@ -89,33 +109,33 @@
 				</a>
 			</section>
 
-			<div class="main__marquee marquee-main marquee-main_blue">
-				<div class="marquee-main__wrapper _marquee-wrapper">
-					<div class="marquee-main__text _marquee-text">
+			<div class="main__marquee marquee marquee_blue">
+				<div class="marquee__wrapper _marquee-wrapper">
+					<div class="marquee__text _marquee-text">
 						Lemurs Agency
 					</div>
-					<div class="marquee-main__text _marquee-text">
+					<div class="marquee__text _marquee-text">
 						Lemurs Agency
 					</div>
-					<div class="marquee-main__text _marquee-text">
+					<div class="marquee__text _marquee-text">
 						Lemurs Agency
 					</div>
 				</div>
 			</div>
 
-			<section class="main-service service-main _animated">
+			<section class="main-service service-main">
 				<div class="service-main__container container">
-					<div class="service-main__title-block title-block">
-						<h2 class="service-main__title title">Услуги</h2>
+					<div class="service-main__title-block title-block" data-scroll data-scroll-speed='1'>
+						<h2 class="service-main__title title _type-text">Услуги</h2>
 						<a href="#" class="service-main__title-link title-link">Посмотреть все</a>
 					</div>
-					<div class="service-main__desc">
+					<div class="service-main__desc" data-scroll data-scroll-speed='2'>
 						Задача организации, в особенности же реализация намеченных
 						плановых заданий влечет за собой процесс внедрения и модернизации
 					</div>
 					<div class="service-main__table">
 
-						<div class="service-main__item item-service">
+						<a href="#" class="service-main__item item-service _animated">
 							<div class="item-service__wrapper">
 
 								<div class="item-service__visible">
@@ -147,9 +167,9 @@
 								</div>
 
 							</div>
-						</div>
+						</a>
 
-						<div class="service-main__item item-service">
+						<a href="#" class="service-main__item item-service _animated">
 							<div class="item-service__wrapper">
 
 								<div class="item-service__visible">
@@ -180,9 +200,9 @@
 								</div>
 
 							</div>
-						</div>
+						</a>
 
-						<div class="service-main__item item-service">
+						<a href="#" class="service-main__item item-service _animated">
 							<div class="item-service__wrapper">
 
 								<div class="item-service__visible">
@@ -214,9 +234,9 @@
 								</div>
 
 							</div>
-						</div>
+						</a>
 
-						<div class="service-main__item item-service">
+						<a href="#" class="service-main__item item-service _animated">
 							<div class="item-service__wrapper">
 
 								<div class="item-service__visible">
@@ -247,9 +267,9 @@
 								</div>
 
 							</div>
-						</div>
+						</a>
 
-						<div class="service-main__item item-service">
+						<a href="#" class="service-main__item item-service _animated">
 							<div class="item-service__wrapper">
 
 								<div class="item-service__visible">
@@ -280,9 +300,9 @@
 								</div>
 
 							</div>
-						</div>
+						</a>
 
-						<div class="service-main__item item-service">
+						<a href="#" class="service-main__item item-service _animated">
 							<div class="item-service__wrapper">
 
 								<div class="item-service__visible">
@@ -313,9 +333,9 @@
 								</div>
 
 							</div>
-						</div>
+						</a>
 
-						<div class="service-main__item item-service">
+						<a href="#" class="service-main__item item-service _animated">
 							<div class="item-service__wrapper">
 
 								<div class="item-service__visible">
@@ -347,9 +367,9 @@
 								</div>
 
 							</div>
-						</div>
+						</a>
 
-						<div class="service-main__item item-service">
+						<a href="#" class="service-main__item item-service _animated">
 							<div class="item-service__wrapper">
 
 								<div class="item-service__visible">
@@ -380,33 +400,34 @@
 								</div>
 
 							</div>
-						</div>
+						</a>
 
 					</div>
 				</div>
 			</section>
 
-			<section class="main__sale sale-main _animated">
-				<div class="sale-main__container container">
-					<div class="sale-main__body">
-						<div class="sale-main__bg">
-							<div class="sale-main__gradient bg-gradient"></div>
-							<div class="sale-main__gradient bg-gradient"></div>
+			<section class="main__sale banner _animated" data-scroll data-scroll-speed='2'>
+				<div class="banner__container container">
+					<div class="banner__body">
+						<div class="banner__bg">
+							<div class="banner__gradient bg-gradient"></div>
+							<div class="banner__gradient bg-gradient"></div>
 						</div>
-						<div class="sale-main__content">
-							<div class="sale-main__image">
+						<div class="banner__content">
+							<div class="banner__image">
 								<svg>
 									<use xlink: href="img/icons/icons.svg#lemur1"></use>
 								</svg>
 							</div>
-							<div class="sale-main__info">
-								<div class="sale-main__value">32%</div>
-								<div class="sale-main__label">на все заказы</div>
-								<div class="sale-main__text">
+							<div class="banner__info">
+								<div class="banner__value">32%</div>
+								<div class="banner__label">на все заказы</div>
+								<div class="banner__text">
 									Заказывай любую услугу в течении 3-х дней и получи скидку до 40%
 								</div>
-								<div class="sale-main__link-wrapper">
-									<a href="#" class="sale-main__link">Заказать услугу</a>
+								<div class="banner__link-wrapper">
+									<a href="#" class="banner__link">Заказать
+										услугу</a>
 								</div>
 							</div>
 						</div>
@@ -414,57 +435,58 @@
 				</div>
 			</section>
 
-			<section class="main__why why-main">
-				<div class="why-main__container container">
-					<div class="why-main__body">
-						<div class="why-main__title-block title-block">
-							<h2 class="why-main__title title">Чому обирають нас</h2>
+			<section class="main__why why">
+				<div class="why__container container">
+					<div class="why__body">
+						<div class="why__title-block title-block" data-scroll data-scroll-speed='1'>
+							<h2 class="why__title title _type-text">Чому обирають нас
+							</h2>
 						</div>
-						<div class="why-main__content">
-							<div class="why-main__bg _animated">
-								<div class="why-main__image">
+						<div class="why__content">
+							<div class="why__bg _animated" data-scroll data-scroll-speed='2'>
+								<div class="why__image">
 									<img src="img/why/image 1.jpg" alt="Bg Image">
 								</div>
-								<div class="why-main__image">
+								<div class="why__image">
 									<img src="img/why/image 2.jpg" alt="Bg Image">
 								</div>
-								<div class="why-main__image">
+								<div class="why__image">
 									<img src="img/why/image 3.jpg" alt="Bg Image">
 								</div>
 							</div>
-							<ol class="why-main__list _animated">
-								<li class="why-main__item">
-									<h3 class="why-main__item-title">Професіоналізм</h3>
-									<div class="why-main__text">
+							<ol class="why__list _animated" data-scroll data-scroll-speed='2'>
+								<li class="why__item">
+									<h3 class="why__item-title">Професіоналізм</h3>
+									<div class="why__text">
 										Для нас – це сукупність, знань, практичного досвіду і професійних навиків. Ми
 										прагнемо створювати не просто вражаючі, а максимально корисні та дієві речі.
 									</div>
 								</li>
-								<li class="why-main__item">
-									<h3 class="why-main__item-title">Ми бережемо ваш час</h3>
-									<div class="why-main__text">
+								<li class="why__item">
+									<h3 class="why__item-title">Ми бережемо ваш час</h3>
+									<div class="why__text">
 										Ми працюємо повністю в онлайн режимі. Ви не витрачаєте час на дорогу, та
 										перемовини. Все в режимі чату та онлайн конференцій
 									</div>
 								</li>
-								<li class="why-main__item">
-									<h3 class="why-main__item-title">Допомагаємо армії та волонтерам</h3>
-									<div class="why-main__text">
+								<li class="why__item">
+									<h3 class="why__item-title">Допомагаємо армії та волонтерам</h3>
+									<div class="why__text">
 										Ми любимо нашу країну. Платимо податки тому працюємо за договором. 30% від
 										доходу віддаємо на зсу, волонтерам або можемо з вами купити продуктів та
 										відвезти тим хто цього потребує (діткам, пенсіонерам або переселенцям)
 									</div>
 								</li>
-								<li class="why-main__item">
-									<h3 class="why-main__item-title">Швидкість</h3>
-									<div class="why-main__text">
+								<li class="why__item">
+									<h3 class="why__item-title">Швидкість</h3>
+									<div class="why__text">
 										Технології не стоять на місці, тому ми приділяємо увагу сучасним тенденціям і
 										швидко адаптовуємось до змін. Цінуємо час клієнтів, дедлайн нас не лякає
 									</div>
 								</li>
-								<li class="why-main__item">
-									<h3 class="why-main__item-title">Працюємо на результат та рекомендації</h3>
-									<div class="why-main__text">
+								<li class="why__item">
+									<h3 class="why__item-title">Працюємо на результат та рекомендації</h3>
+									<div class="why__text">
 										Технології не стоять на місці, тому ми приділяємо увагу сучасним тенденціям і
 										швидко адаптовуємось до змін.
 										Цінуємо час клієнтів, дедлайн нас не лякає
@@ -476,65 +498,65 @@
 				</div>
 			</section>
 
-			<section class="main__portfolio portfolio-main">
-				<div class="portfolio-main__container container">
-					<div class="portfolio-main__body">
-						<div class="portfolio-main__title-block title-block">
-							<h2 class="portfolio-main__title title">Портфолио</h2>
-							<a href="#" class="portfolio-main__title-link title-link">
+			<section class="main__portfolio portfolio">
+				<div class="portfolio__container container">
+					<div class="portfolio__body">
+						<div class="portfolio__title-block title-block" data-scroll data-scroll-speed='1'>
+							<h2 class="portfolio__title title">Портфолио</h2>
+							<a href="#" class="portfolio__title-link title-link">
 								Посмотреть все
 							</a>
 						</div>
-						<div class="cards-portfolio__btns">
-							<a href="#" class="cards-portfolio__btn btn_pink active">Все</a>
-							<a href="#" class="cards-portfolio__btn btn_pink">Веб-сайты</a>
-							<a href="#" class="cards-portfolio__btn btn_pink">Сайт-візитка</a>
-							<a href="#" class="cards-portfolio__btn btn_pink">Сайт-каталог</a>
+						<div class="cards-portfolio__btns" data-scroll data-scroll-speed='2'>
+							<a href="#" class="cards-portfolio__btn btn_pink active" data-filter="all">Все</a>
+							<a href="#" class="cards-portfolio__btn btn_pink" data-filter=".web">Веб-сайты</a>
+							<a href="#" class="cards-portfolio__btn btn_pink" data-filter=".card">Сайт-візитка</a>
+							<a href="#" class="cards-portfolio__btn btn_pink" data-filter=".catalog">Сайт-каталог</a>
 						</div>
-						<div class="portfolio-main__cards cards-portfolio _animated">
-							<div class="cards-portfolio__items_first">
-								<div class="cards-portfolio__item">
-									<div class="cards-portfolio__image cards-portfolio__image_blue">
+						<div class="portfolio__cards cards-portfolio">
+							<div class="cards-portfolio__items_first mix web" data-scroll data-scroll-speed='3'>
+								<div class="cards-portfolio__item _animated">
+									<a href="#" class="cards-portfolio__image cards-portfolio__image_blue">
 										<picture><source srcset="img/portfolio/card1.webp" type="image/webp"><img src="img/portfolio/card1.png" alt="Card Image"></picture>
-									</div>
+									</a>
 									<div class="cards-portfolio__info">
 										<div class="cards-portfolio__name">Ozon</div>
 										<div class="cards-portfolio__desc">Мобильное приложение</div>
 									</div>
 								</div>
-								<div class="cards-portfolio__item">
-									<div class="cards-portfolio__image cards-portfolio__image_lightblue">
-										<picture><source srcset="img/portfolio/card2.webp" type="image/webp"><img src="img/portfolio/card2.png" alt="Card Image"></picture>
-									</div>
+								<div class="cards-portfolio__item _animated">
+									<a href="#" class="cards-portfolio__image cards-portfolio__image_lightblue">
+										<picture><source srcset="img/portfolio/Card2.webp" type="image/webp"><img src="img/portfolio/Card2.png" alt="Card Image"></picture>
+									</a>
 									<div class="cards-portfolio__info">
 										<div class="cards-portfolio__name">MyCar</div>
 										<div class="cards-portfolio__desc">Сайт</div>
 									</div>
 								</div>
 							</div>
-							<div class="cards-portfolio__items">
-								<div class="cards-portfolio__item">
-									<div class="cards-portfolio__image cards-portfolio__image_red">
-										<picture><source srcset="img/portfolio/card3.webp" type="image/webp"><img src="img/portfolio/card3.png" alt="Card Image"></picture>
-									</div>
+							<div class="cards-portfolio__items mix card" data-scroll data-scroll-speed='10'>
+								<div class="cards-portfolio__item _animated">
+									<a href="#" class="cards-portfolio__image cards-portfolio__image_red">
+										<picture><source srcset="img/portfolio/Card3.webp" type="image/webp"><img src="img/portfolio/Card3.png" alt="Card Image"></picture>
+									</a>
 									<div class="cards-portfolio__info">
 										<div class="cards-portfolio__name">Пятерочка</div>
 										<div class="cards-portfolio__desc">Приложение</div>
 									</div>
 								</div>
-								<div class="cards-portfolio__item">
-									<div class="cards-portfolio__image cards-portfolio__image_lightpink">
-										<picture><source srcset="img/portfolio/card4.webp" type="image/webp"><img src="img/portfolio/card4.png" alt="Card Image"></picture>
-									</div>
+								<div class="cards-portfolio__item _animated">
+									<a href="#" class="cards-portfolio__image cards-portfolio__image_lightpink">
+										<picture><source srcset="img/portfolio/Card4.webp" type="image/webp"><img src="img/portfolio/Card4.png" alt="Card Image"></picture>
+									</a>
 									<div class="cards-portfolio__info">
 										<div class="cards-portfolio__name">MyPet</div>
 										<div class="cards-portfolio__desc">Приложение</div>
 									</div>
 								</div>
-								<div class="cards-portfolio__item">
-									<div class="cards-portfolio__image cards-portfolio__image_pink">
-										<picture><source srcset="img/portfolio/card5.webp" type="image/webp"><img src="img/portfolio/card5.png" alt="Card Image"></picture>
-									</div>
+								<div class="cards-portfolio__item _animated">
+									<a href="#" class="cards-portfolio__image cards-portfolio__image_pink">
+										<picture><source srcset="img/portfolio/Card5.webp" type="image/webp"><img src="img/portfolio/Card5.png" alt="Card Image"></picture>
+									</a>
 									<div class="cards-portfolio__info">
 										<div class="cards-portfolio__name">Ostin</div>
 										<div class="cards-portfolio__desc">Приложение</div>
@@ -546,15 +568,15 @@
 				</div>
 			</section>
 
-			<div class="main__marquee marquee-main marquee-main_pink">
-				<div class="marquee-main__wrapper _marquee-wrapper">
-					<div class="marquee-main__text _marquee-text">
+			<div class="main__marquee marquee marquee_pink">
+				<div class="marquee__wrapper _marquee-wrapper">
+					<div class="marquee__text _marquee-text">
 						Lemurs Agency
 					</div>
-					<div class="marquee-main__text _marquee-text">
+					<div class="marquee__text _marquee-text">
 						Lemurs Agency
 					</div>
-					<div class="marquee-main__text _marquee-text">
+					<div class="marquee__text _marquee-text">
 						Lemurs Agency
 					</div>
 				</div>
@@ -564,7 +586,7 @@
 				<div class="about-main__comtainer container">
 					<div class="about-main__content">
 						<div class="about-main__block">
-							<div class="about-main__image">
+							<div class="about-main__image" data-scroll data-scroll-speed='1'>
 								<div class="about-main__image-path">
 									<svg>
 										<use xlink: href="img/icons/icons.svg#lemur2"></use>
@@ -572,11 +594,11 @@
 								</div>
 							</div>
 							<div class="about-main__info">
-								<div class="about-main__title-block title-block">
+								<div class="about-main__title-block title-block" data-scroll data-scroll-speed='1'>
 									<h2 class="about-main__title title">О нас</h2>
 									<a href="" class="about-main__title-link title-link">Подробнее</a>
 								</div>
-								<div class="about-main__text">
+								<div class="about-main__text" data-scroll data-scroll-speed='3'>
 									Первое знакомство происходит с проект-менеджером (клиент-менеджером,
 									аккаунт-менеджером, как угодно). Именно этот человек связующее звено между клиентом
 									и всеми другими отделами компании. Его основная задача – определить потребность и на
@@ -586,7 +608,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="about-main__counters counters">
+						<div class="about-main__counters counters" data-scroll data-scroll-speed='5'>
 							<div class="counters__item">
 								<div class="counters__digits counters__digits_blue"><span data-counter>25</span>+</div>
 								<div class="counters__desc">Landing page</div>
@@ -617,28 +639,28 @@
 				</div>
 			</section>
 
-			<section class="main__form form-main">
-				<div class="form-main__bg">
-					<div class="form-main__gradient bg-gradient"></div>
-					<div class="form-main__gradient bg-gradient"></div>
+			<section class="main__form callback">
+				<div class="callback__bg">
+					<div class="callback__gradient bg-gradient"></div>
+					<div class="callback__gradient bg-gradient"></div>
 				</div>
-				<div class="form-main__container container">
-					<form action="#" class="form-main__body">
-						<h2 class="form-main__title">
+				<div class="callback__container container">
+					<form action="#" class="callback__body">
+						<h2 class="callback__title">
 							Остались вопросы или хотите сделать заказ?
 						</h2>
-						<div class="form-main__desc">
+						<div class="callback__desc">
 							Оставьте заявку на звонок и мы с вами свяжемся. Мы с удовольствием вам поможем!
 						</div>
 						<input type="text" placeholder="Имя">
 						<input type="text" placeholder="Почта" class="_email">
 						<textarea name="comment" placeholder="Вопрос"></textarea>
-						<div class="form-main__checkbox checkbox">
+						<div class="callback__checkbox checkbox">
 							Поставив отметку, Вы даете согласие на обработку персональных данных и соглашаетесь
 							c политикой конфиденциальности.
 							<input type="checkbox" name="agreement">
 						</div>
-						<button type="submit" class="form-main__btn btn_green">Надіслати</button>
+						<button type="submit" class="callback__btn btn_green">Надіслати</button>
 					</form>
 				</div>
 			</section>
@@ -690,8 +712,37 @@
         </a>
     </div>
 </footer>
+		<div class="callback__popup popup" id="callback">
+    <div class="popup__body">
+        <div class="popup__content">
+            <a href="#header" class="popup__close close-popup">
+                <svg>
+                    <use xlink: href="img/icons/icons.svg#close"></use>
+                </svg>
+            </a>
+            <form action="#" class="callback__body">
+                <h2 class="callback__title">
+                    Остались вопросы или хотите сделать заказ?
+                </h2>
+                <div class="callback__desc">
+                    Оставьте заявку на звонок и мы с вами свяжемся. Мы с удовольствием вам поможем!
+                </div>
+                <input type="text" placeholder="Имя">
+                <input type="text" placeholder="Почта" class="_email">
+                <textarea name="comment" placeholder="Вопрос"></textarea>
+                <div class="callback__checkbox checkbox">
+                    Поставив отметку, Вы даете согласие на обработку персональных данных и соглашаетесь
+                    c политикой конфиденциальности.
+                    <input type="checkbox" name="agreement">
+                </div>
+                <button type="submit" class="callback__btn btn_green">Надіслати</button>
+            </form>
+        </div>
+    </div>
+</div>
+
 	</div>
-	<script src="js/app.min.js?_v=20220627221224"></script>
+	<script src="js/app.min.js?_v=20220703100607"></script>
 </body>
 
 </html>
